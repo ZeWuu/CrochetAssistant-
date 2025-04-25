@@ -1,0 +1,89 @@
+section { 
+    position: relative;
+    max-width: 500px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    backdrop-filter: blur(55px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 3rem;
+    transition: all 1s ease-in-out;
+    opacity: 0;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputbox {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    width: 100%;
+}
+
+.inputbox label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+} 
+ 
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+    position: relative;
+}
+
+.input-wrapper img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    opacity: 0.7;
+    flex-shrink: 0;
+}
+
+.input-wrapper input {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: transparent;
+    width: 100%;
+    height: 20px;
+    padding: 0 35px 0 5px;
+}
+
+.error-message {
+    color: rgb(91, 23, 23);
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.register, .password-reset {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.register a, .password-reset a {
+    color: #79ca7c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register a:hover, .password-reset a:hover {
+    text-decoration: underline;
+}

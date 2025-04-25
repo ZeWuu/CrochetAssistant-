@@ -1,0 +1,54 @@
+<!-- TODO: w filmie byl tu skrypt zapisujacy dane do json
+TODO:SKONCZONE NA 25 MINUCIE, JAPIERW TRZEBA ZROBIC LOGIN page
+TODO:ikonki do zrobienia -->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/authStyle.css" />
+    <script src="/js/loginPage.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <section>
+        <form th:action="@{/login}" method="post">
+            <h1>Log In</h1>
+            <div th:if="${errorMessage}" class="error-message">
+                <p th:text="${errorMessage}"></p>
+            </div>
+            <div class="inputbox">
+                <label for="username">Username:</label>
+                <div class="input-wrapper">
+                    <img src="/images/user.svg" alt="User Icon">
+                    <input type="text" id="username" name="username" required>
+                </div>
+            </div>
+            <div class="inputbox">
+                <label for="password">Password:</label>
+                <div class="input-wrapper">
+                    <img src="/images/lock.svg" alt="Lock Icon">
+                    <input type="password" id="password" name="password" required>
+                </div>
+            </div>
+
+            <input type="hidden" th:name="header_name" th:value="${_csrf.headerName}"/>  
+            <input type="hidden" th:name="_csrf" th:value="${_csrf.token}" />
+
+            <button>Log In</button>
+            <div class="register">
+                <span>Dont't have an account?</span>
+                <a href="/signup">Sign Up</a>
+            </div>
+            <div class="password-reset">
+                <a href="/password-reset">Forgot your password?</a>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>

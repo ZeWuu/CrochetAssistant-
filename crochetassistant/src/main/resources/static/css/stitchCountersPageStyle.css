@@ -1,0 +1,44 @@
+.color-palette {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.color-palette div {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.size-container {
+    display: inline-flex;
+    align-items: center;
+}
+
+.size-container button {
+    font-size: 18px;
+}
+
+.size-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.editor {
+    min-height: 300px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.size-menu div {
+    cursor: pointer;
+    margin: 5px 0;
+}

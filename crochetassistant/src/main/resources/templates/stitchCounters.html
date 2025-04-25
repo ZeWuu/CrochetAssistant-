@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Stitch Counters - Crocheting Assistant</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/stitchCountersPage.js" defer></script>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <section class="main-section">
+        <h1>Stitch Counters</h1>
+        <h3>Counters for Project: <span id="project-name"></span></h3>
+        <ul></ul>
+        <button onclick="addCounter(new URLSearchParams(window.location.search).get('project'))">Add Counter</button>
+
+        <div class="time_counter_container">
+            <h2>Time Counter</h2>
+            <div class="time_counter">
+                <button onclick="startTimer()">Start</button>
+                <button onclick="stopTimer()">Stop</button>
+                <button onclick="resetTimer()">Reset</button>
+                <p id="time">00:00:00</p>
+            </div>
+        </div>
+
+
+        <h2>Notes</h2>
+
+        <div class="text_editor_container">
+            <div class="toolbar">
+                <button onclick="modifyText('bold')"><b>B</b></button>
+                <button onclick="modifyText('italic')"><i>I</i></button>
+                <button onclick="modifyText('underline')"><u>U</u></button>
+                <button onclick="modifyText('insertOrderedList')">List</button>
+                <select onchange="modifyText('fontSize', this.value)">
+                    <option value="1">Small</option>
+                    <option value="3" selected>Normal</option>
+                    <option value="5">Large</option>
+                </select>
+                <input type="color" onchange="modifyColor('foreColor', this.value)" />
+            </div>
+            <div id="editor" class="editor" contenteditable="true">
+                <p>Start typing here...</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
